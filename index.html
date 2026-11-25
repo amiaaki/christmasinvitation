@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christmas party invite</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="invitation.js" defer></script>
+</head>
+<body>
+    <main>
+        <section id="welcome">
+            <h1>You're invited!</h1>
+            <button id="open-btn" class="polaroid tilt-left" type="button" aria-label="Open your invitation">
+                <img src="mail.png" alt="A green envelope with a red seal">
+                <span class="caption">open me !!</span>
+            </button>
+        </section>
+
+        <section id="question" hidden>
+            <h2>Will you join?</h2>
+            <p>I'm hosting a Christmas party (a chill one) and inviting my friends, including you!</p>
+            <div id="choices" class="choices">
+                <button id="yes-btn" class="btn yes" type="button">Yes, absolutely!</button>
+                <button id="no-btn" class="btn no" type="button">No</button>
+            </div>
+        </section>
+
+        <section id="details" hidden>
+            <h2 id="details-title" tabindex="-1">You're coming!</h2>
+            <p>Can't wait !! Here's the plan so far:</p>
+
+            <figure class="polaroid tilt-right">
+                <img src="venue.jpg" alt="The party venue">
+                <figcaption class="caption">the venue</figcaption>
+            </figure>
+
+            <dl class="facts">
+                <dt>When</dt>
+                <dd>December 8th, 2026 | 2PM to 4PM</dd>
+                <dt>Where</dt>
+                <dd>Tambayan sa Mamang's near UN Station</dd>
+                <dt>Bring</dt>
+                <dd>Yourself, plus a snack or drink since we only have carbonara and cinnamon bites :></dd>
+            </dl>
+
+            <h3>House rules</h3>
+            <ul class="rules">
+                <!-- TODO: put the real rules here -->
+                <li>once 2pm hits, the countdown of the venue begins</li>
+                <li>Make the most of your 2 hours !</li>
+                <li>There are arcade games, board games, and study areas</li>
+                <li>Bringing snacks would be appreciated :></li>
+                <li>Bring a plus one or two (TALK TO ME FIRST)</li>
+                <li>Feel free to bring gifts since it's a christmas party :> (only if you want to)</li>
+            </ul>
+
+            <p>See you there!</p>
+        </section>
+    </main>
+
+    <div id="goodbye" class="goodbye" role="dialog" aria-modal="true" aria-labelledby="goodbye-msg" hidden>
+        <div class="note" tabindex="-1">
+            <p id="goodbye-msg">Alright then, I guess I'll see you next party :&gt; Take care okay?</p>
+            <button id="undo-btn" class="btn yes" type="button">Wait, I misclicked</button>
+        </div>
+    </div>
+</body>
+</html>
